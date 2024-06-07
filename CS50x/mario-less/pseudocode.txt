@@ -1,0 +1,14 @@
+1 Start Programme
+2  Get Input from user for height
+3  If input is not between 1 and 8
+          Go to line 2
+4  Set initial count by 1
+5  Print (height-count) times white space
+6  print  'count' times block (#)
+7  print a new line for next block
+8  Increase count value by 1
+9  If count value is equal to height
+        Go to line 11
+10  Else
+        Go to line 5
+11  End Program

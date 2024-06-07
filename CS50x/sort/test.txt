@@ -1,0 +1,70 @@
+Time Test
+(real)
+
+sort1
+-----
+Worst case :
+      random5k -- 0.103s
+      random10k -- 0.214s
+      random50k -- 7.274s
+Best case :
+      sorted5k -- 0.032s
+      sorted10k -- 0.077s
+      sorted50k --- 1.997s
+
+ Conclusion: Bubble sort
+
+
+sort2
+-----
+Worst case :
+     random5k -- 0.033s
+     random10k -- 0.094s
+     random50k --1.919s
+
+Best case :
+     sorted5k -- 0.032s
+     sorted10k -- 0.077s
+     sorted50k --- 1.875s
+
+ Conclusion: theta(n log(n)) -- merge sort
+
+ sort3
+ -----
+ Worst case :
+   random5k -- 0.063s
+   random10k -- 0.144s
+   random50k -- 3.714s
+
+Best case :
+ sorted5k -- 0.054s
+ sorted10k --0.167s
+ sorted50k -- 3.903s
+
+ Conclusion: selection sort
+
+
+Reversed
+    5k :
+       s1 -- 0.082
+       s2 -- 0.03s
+       s3 -- 0.051s
+
+    10k :
+       s1 -- 0.265s
+       s2 -- 0.150s
+       s3 -- 0.146s
+
+    50k :
+       s1 -- 6.78s
+       s2 -- 2.108s
+       s3 -- 4.370s
+
+
+
+Result:
+
+sort1 == Bubble  Sort
+sort2 == Merge Sort
+sort3 == Selection Sort
+

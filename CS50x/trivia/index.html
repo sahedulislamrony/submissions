@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <div id="q1" class="questions">
+                    <h3 class="qTitle">Q1: What is the capital of the united states?</h3>
+                    <p class="responseTxt"></p>
+                    <div class="options">
+                        <ul>
+                            <li class="" value="0">New York</li>
+                            <li class="" value="1">Washington D.C</li>
+                            <li class="" value="0">Seattle</li>
+                            <li class="" value="0">London</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="q2" class="questions">
+                    <h3 class="qTitle">Q2: What is the meaning of latin word "Veritas" ?</h3>
+                    <p class="responseTxt"></p>
+                    <div class="options">
+                        <ul>
+                            <li class="" value="1">Truth</li>
+                            <li class="" value="0">Education</li>
+                            <li class="" value="0">Wisdom</li>
+                            <li class="" value="0">Knowledge</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="q3" class="questions">
+                    <h3 class="qTitle">Q3: Which river is the longest in the world?</h3>
+                    <p class="responseTxt"></p>
+                    <div class="options">
+                        <ul>
+                            <li class="" value="0">Amazon</li>
+                            <li class="" value="1">Nile</li>
+                            <li class="" value="0">Mississippi</li>
+                            <li class="" value="0">Yangtze</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="q4" class="questions">
+                    <h3 class="qTitle">Q4: Who wrote the play "Romeo and Juliet"?</h3>
+                    <p class="responseTxt"></p>
+                    <div class="options">
+                        <ul>
+                            <li class="" value="0">Charles Dickens</li>
+                            <li class="" value="1">W. Shakespeare</li>
+                            <li class="" value="0">Jane Austen</li>
+                            <li class="" value="0">Mark Twain</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="q5" class="questions">
+                    <h3 class="qTitle">Q5: What is the only planet in our solar system that rotates clockwise ?</h3>
+                    <p class="responseTxt"></p>
+                    <div class="options">
+                        <ul>
+                            <li class="" value="0">Earth</li>
+                            <li class="" value="1">Venus</li>
+                            <li class="" value="0">Mars</li>
+                            <li class="" value="0">Jupiter</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <div class="questionsIn" id="q1">
+                    <h3>Q1: What is the smallest prime number ?</h3>
+                    <p class="responseTxt"></p>
+                    <form>
+                        <input class="" type="text" autocomplete="off" placeholder="Type answer...">
+                        <button type="submit">check answer</button>
+                    </form>
+                </div>
+                <div class="questionsIn" id="q2">
+                    <h3>Q2: Which element is the most abundant in Earth's crust ?</h3>
+                    <p class="responseTxt"></p>
+                    <form>
+                        <input class="" type="text" autocomplete="off" placeholder="Type answer...">
+                        <button type="submit">check answer</button>
+                    </form>
+                </div>
+                <div class="questionsIn" id="q3">
+                    <h3>Q3: In what year did the Titanic sink ?</h3>
+                    <p class="responseTxt"></p>
+                    <form>
+                        <input class="" type="text" autocomplete="off" placeholder="Type answer...">
+                        <button type="submit">check answer</button>
+                    </form>
+                </div>
+                <div class="questionsIn" id="q4">
+                    <h3>Q4: What is the capital of Australia ?</h3>
+                    <p class="responseTxt"></p>
+                    <form>
+                        <input class="" type="text" autocomplete="off" placeholder="Type answer...">
+                        <button type="submit">check answer</button>
+                    </form>
+                </div>
+                <div class="questionsIn" id="q5">
+                    <h3>Q5: What is the world's largest ocean ?</h3>
+                    <p class="responseTxt"></p>
+                    <form>
+                        <input class="" type="text" autocomplete="off" placeholder="Type answer...">
+                        <button type="submit">check answer</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            // MCQ Start
+            let questions = document.querySelectorAll('.questions');
+            questions.forEach((question) => {
+                let option = question.querySelectorAll('.options ul li');
+                let prevIndex = -1;
+                option.forEach((e, index) => {
+                    e.addEventListener('click', () => {
+                        let response = e.parentNode.parentNode.parentNode.childNodes[3];
+                        if (e.value) {
+                            e.classList.add("success");
+                            if (response.classList.contains("wrong")) {
+                                response.classList.remove("wrong");
+                            }
+                            response.classList.add("success");
+                            response.innerHTML = 'correct!';
+                        } else {
+                            e.classList.add("wrong");
+                            if (response.classList.contains("success")) {
+                                response.classList.remove("success");
+                            }
+                            response.classList.add("wrong");
+                            response.innerHTML = 'incorrect';
+                        }
+                        if (prevIndex != -1) {
+                            if (option[prevIndex].classList.contains("success")) {
+                                option[prevIndex].classList.remove("success")
+                            } else {
+                                option[prevIndex].classList.remove("wrong")
+
+                            }
+                        }
+                        prevIndex = index;
+                    });
+                });
+
+            });
+
+            // MCQ End
+
+            // input box question start
+
+            let answers = [2, 'Oxygen', 1912, 'Canberra', 'Pacific Ocean']; // i-th element contains q-i answers
+
+            for (let i = 0; i < answers.length; i++) {
+                if (typeof answers[i] === 'string') {
+                    answers[i] = answers[i].toUpperCase();
+                }
+            }
+            let questionIn = document.querySelectorAll('.questionsIn');
+            questionIn.forEach((elm, index) => {
+                let form = elm.querySelector('form');
+                form.addEventListener('submit', (e) => {
+
+                    let input = form.querySelector('input[type="text"]');
+                    let response = elm.childNodes[3];
+                    if (input.value.trim().toUpperCase() == answers[index]) {
+                        response.classList.add("success");
+                        input.classList.add("success");
+
+                        response.innerHTML = "correct!";
+                        if (response.classList.contains("wrong")) {
+                            response.classList.remove("wrong");
+                            input.classList.remove("wrong");
+                        }
+
+                    } else {
+                        response.classList.add("wrong");
+                        input.classList.add("wrong");
+                        response.innerHTML = "incorrect";
+                        if (response.classList.contains("success")) {
+                            response.classList.remove("success");
+                            input.classList.remove("success");
+                        }
+
+                    }
+
+                    e.preventDefault();
+
+                });
+            });
+
+            // input box question end
+        </script>
+    </body>
+
+</html>

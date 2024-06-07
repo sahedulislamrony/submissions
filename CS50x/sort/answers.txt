@@ -1,0 +1,15 @@
+sort1 uses: Bubble Sort
+
+How do you know?: The observation is based on an analysis of the sorting time. Notably, the process of sorting sorted items consumes less time compared to the sorting of randomly arranged or reversed items. As the size of the elements increases, the time required for sorting also increases accordingly.
+
+
+sort2 uses: Merge Sort
+
+How do you know?: It takes less time in every items for sorting than two others.
+
+sort3 uses: Selection Sort
+
+How do you know?: Sorting both unsorted and already sorted items takes nearly the same amount of time. Additionally, as the size of the elements increases, the time required for sorting also increases accordingly.
+
+
+
