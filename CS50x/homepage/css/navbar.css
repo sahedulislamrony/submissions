@@ -1,0 +1,85 @@
+nav.navbar {
+  background: #323643;
+  border-color: #32a1e1;
+}
+nav.navbar .navbar-brand img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #f7f7f7;
+}
+nav.navbar button.navbar-toggler {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #e2dfdf;
+  box-shadow: none;
+  color: beige;
+}
+nav.navbar button.navbar-toggler:focus {
+  box-shadow: none;
+}
+nav.navbar button.navbar-toggler:hover {
+  border-color: #32a1e1;
+  box-shadow: none;
+}
+nav.navbar button.navbar-toggler i {
+  transition: all 0.3s;
+  font-size: 2.5rem;
+}
+nav.navbar button.navbar-toggler i:hover {
+  color: #32a1e1;
+}
+nav.navbar button.navbar-toggler.show i {
+  transition: all 0.3s;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+nav.navbar ul li.nav-item {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.1rem;
+  padding: 0rem 1rem;
+  margin: 0.5rem 1rem;
+}
+nav.navbar ul li.nav-item:last-child {
+  border: 1px solid #f7f7f7;
+}
+nav.navbar ul li.nav-item:last-child:hover {
+  border-color: #32a1e1;
+}
+nav.navbar ul li.nav-item .nav-link {
+  color: #e2dfdf;
+}
+nav.navbar ul li.nav-item .nav-link:hover {
+  color: #32a1e1;
+}
+nav.navbar ul li.nav-item a {
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+nav.navbar ul li.nav-item a:hover,
+nav.navbar ul li.nav-item a:focus,
+nav.navbar ul li.nav-item a:active {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+@media (max-width: 991.98px) {
+  nav.navbar ul li.nav-item {
+    padding: 0;
+    margin: 0.5rem 0rem;
+  }
+  nav.navbar ul li.nav-item:last-child {
+    border: none;
+  }
+  nav.navbar ul li.nav-item:last-child span {
+    padding: 0.7rem 1rem;
+    border: 1px solid #32a1e1;
+  }
+}
